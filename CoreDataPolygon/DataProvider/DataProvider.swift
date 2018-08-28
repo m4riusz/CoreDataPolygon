@@ -8,6 +8,8 @@ class DataProvider: NSObject {
     }
     
     public static let shared: DataProvider = DataProvider()
+    typealias CoreDataSuccessCallback<T: Any> = (T) -> Void
+    typealias CoreDataErrorCallback = (Error) -> Void
     
     // MARK: - Core Data stack
     
@@ -23,15 +25,10 @@ class DataProvider: NSObject {
     
     // MARK: - Core Data Saving support
     
-    func saveContext () {
+    func saveContext() throws {
         let context = persistentContainer.viewContext
         if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
+            try context.save()
         }
     }
     
@@ -39,24 +36,34 @@ class DataProvider: NSObject {
 
 extension DataProvider {
     
-    func addNewHome(withStreet street: String?, withCity city: String?, withPostal postal: String?) -> Home {
+    func homesAddNew(withStreet street: String?, withCity city: String?, withPostal postal: String?, withSuccessCallback onSuccess: CoreDataSuccessCallback<Home>?, withErrorCallback onError: CoreDataErrorCallback?) -> Void {
         
         let home: Home = Home(context: persistentContainer.viewContext)
         home.street = street
         home.city = city
         home.postal = postal
         home.persons = nil
-        saveContext()
-        return home
+        do {
+            try saveContext()
+            onSuccess?(home)
+        } catch let error {
+            onError?(error)
+        }
+        
     }
     
-    func getHomes() -> [Home] {
+    func homesGetWithPredicate(_ predicate: NSPredicate? = nil,
+                               withSortDescriptions sortDescriptions: [NSSortDescriptor]? = nil,
+                               withSuccessCallback onSuccess: CoreDataSuccessCallback<[Home]>?,
+                               withErrorCallback onError: CoreDataErrorCallback?) -> Void {
         do {
-            let homes: [Home] = try persistentContainer.viewContext.fetch(Home.fetchRequest()) as [Home]
-            return homes
+            let fetchRequest: NSFetchRequest = Home.fetchRequest()
+            fetchRequest.predicate = predicate
+            fetchRequest.sortDescriptors = sortDescriptions
+            let homes: [Home] = try persistentContainer.viewContext.fetch(fetchRequest) as [Home]
+            onSuccess?(homes)
         } catch let error {
-            print(error.localizedDescription)
-            return []
+            onError?(error)
         }
     }
     

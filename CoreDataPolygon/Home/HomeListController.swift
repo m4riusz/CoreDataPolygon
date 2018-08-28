@@ -14,7 +14,12 @@ class HomeListController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        homes = DataProvider.shared.getHomes()
+        DataProvider.shared.homesGetWithPredicate(withSuccessCallback: { (homes) in
+            self.homes = homes
+            self.tableView.reloadData()
+        }) { (error) in
+            fatalError(error.localizedDescription)
+        }
     }
     
     @objc
@@ -33,10 +38,13 @@ class HomeListController: UIViewController {
             let street: String? = alert.textFields![0].text
             let city: String? = alert.textFields![1].text
             let postal: String? = alert.textFields![2].text
-            self.homes.insert(DataProvider.shared.addNewHome(withStreet: street, withCity: city, withPostal: postal), at: 0)
-            alert.dismiss(animated: true, completion: nil)
-            self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
-            
+            DataProvider.shared.homesAddNew(withStreet: street, withCity: city, withPostal: postal, withSuccessCallback: { (home) in
+                alert.dismiss(animated: true, completion: nil)
+                self.homes.insert(home, at: 0)
+                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+            }, withErrorCallback: { (error) in
+                fatalError(error.localizedDescription)
+            })
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             
@@ -57,7 +65,7 @@ extension HomeListController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: SubtitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SubtitleTableViewCell") as! SubtitleTableViewCell
+        let cell: SubtitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SubtitleTableViewCell", for: indexPath) as! SubtitleTableViewCell
         let home: Home = homes[indexPath.row]
         let street: String = home.street ?? ""
         let city: String = home.city ?? ""
