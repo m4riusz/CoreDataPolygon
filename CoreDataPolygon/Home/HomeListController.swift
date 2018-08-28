@@ -18,7 +18,7 @@ class HomeListController: UIViewController {
             self.homes = homes
             self.tableView.reloadData()
         }) { (error) in
-            fatalError(error.localizedDescription)
+            NSLog(error.localizedDescription)
         }
     }
     
@@ -39,11 +39,10 @@ class HomeListController: UIViewController {
             let city: String? = alert.textFields![1].text
             let postal: String? = alert.textFields![2].text
             DataProvider.shared.homesAddNew(withStreet: street, withCity: city, withPostal: postal, withSuccessCallback: { (home) in
-                alert.dismiss(animated: true, completion: nil)
                 self.homes.insert(home, at: 0)
                 self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
             }, withErrorCallback: { (error) in
-                fatalError(error.localizedDescription)
+                NSLog(error.localizedDescription)
             })
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in

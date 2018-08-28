@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreDataPolygon/Home/HomeListController.swift"
-            timestampString = "557184009.665572"
+            timestampString = "557186871.472183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreDataPolygon/Home/HomeListController.swift"
-            timestampString = "557184009.66601"
+            timestampString = "557186871.4722511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,45 +42,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreDataPolygon/Home/HomeListController.swift"
-            timestampString = "557184009.666206"
+            timestampString = "557186871.4723001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataPolygon/Home/HomeListController.swift"
+            timestampString = "557186871.472345"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "onAddButton()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 (__ObjC.UIAlertAction) -&gt; () in CoreDataPolygon.HomeListController.onAddButton() -&gt; ()"
-                  moduleName = "CoreDataPolygon"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mariusz/Projects/CoreDataPolygon/CoreDataPolygon/Home/HomeListController.swift"
-                  timestampString = "557092787.286584"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "2427">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #4 (__ObjC.UIAlertAction) -&gt; () in CoreDataPolygon.HomeListController.onAddButton() -&gt; ()"
-                  moduleName = "CoreDataPolygon"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mariusz/Projects/CoreDataPolygon/CoreDataPolygon/Home/HomeListController.swift"
-                  timestampString = "557092787.29321"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,12 +74,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreDataPolygon/Home/HomeListController.swift"
-            timestampString = "557184009.6664"
+            timestampString = "557186871.472381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "onAddButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataPolygon/DataProvider/DataProvider.swift"
+            timestampString = "557186871.472418"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "homesAddNew(withStreet:withCity:withPostal:withSuccessCallback:withErrorCallback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataPolygon/DataProvider/DataProvider.swift"
+            timestampString = "557186871.472453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "homesAddNew(withStreet:withCity:withPostal:withSuccessCallback:withErrorCallback:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
