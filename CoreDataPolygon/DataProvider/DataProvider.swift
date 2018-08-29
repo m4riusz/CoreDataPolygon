@@ -103,9 +103,15 @@ extension DataProvider {
     }
     
     func personsUpdatePerson(_ person: Person,
-                             withSuccessCallback onSuccess: CoreDataSuccessCallback<[Person]>?,
+                             withSuccessCallback onSuccess: CoreDataSuccessCallback<Person>?,
                              withErrorCallback onError: CoreDataErrorCallback?) -> Void {
         
+        do {
+            try saveContext()
+            onSuccess?(person)
+        } catch let error {
+            onError?(error)
+        }
     }
     
 }

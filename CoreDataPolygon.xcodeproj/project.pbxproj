@@ -15,15 +15,15 @@
 		6F4C3F2B213472FD0087FD13 /* PersonListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4C3F29213472FD0087FD13 /* PersonListController.xib */; };
 		6F4C3F2E2134731D0087FD13 /* HomeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F2C2134731D0087FD13 /* HomeListController.swift */; };
 		6F4C3F2F2134731D0087FD13 /* HomeListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4C3F2D2134731D0087FD13 /* HomeListController.xib */; };
-		6F4C3F3C213476D10087FD13 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F38213476D10087FD13 /* Person+CoreDataClass.swift */; };
-		6F4C3F3D213476D10087FD13 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F39213476D10087FD13 /* Person+CoreDataProperties.swift */; };
-		6F4C3F3E213476D10087FD13 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F3A213476D10087FD13 /* Home+CoreDataClass.swift */; };
-		6F4C3F3F213476D10087FD13 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F3B213476D10087FD13 /* Home+CoreDataProperties.swift */; };
 		6F4C3F45213483600087FD13 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F44213483600087FD13 /* DataProvider.swift */; };
 		6F4C3F4B21348F5D0087FD13 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F4921348F5D0087FD13 /* SubtitleTableViewCell.swift */; };
 		6F4C3F4C21348F5D0087FD13 /* SubtitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4C3F4A21348F5D0087FD13 /* SubtitleTableViewCell.xib */; };
 		6FB59AA42137311100C499B2 /* HomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AA22137311100C499B2 /* HomeDetailController.swift */; };
 		6FB59AA52137311100C499B2 /* HomeDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FB59AA32137311100C499B2 /* HomeDetailController.xib */; };
+		6FB59ABA2137469300C499B2 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB62137469300C499B2 /* Person+CoreDataClass.swift */; };
+		6FB59ABB2137469300C499B2 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB72137469300C499B2 /* Person+CoreDataProperties.swift */; };
+		6FB59ABC2137469300C499B2 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB82137469300C499B2 /* Home+CoreDataClass.swift */; };
+		6FB59ABD2137469300C499B2 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB92137469300C499B2 /* Home+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,15 +37,15 @@
 		6F4C3F29213472FD0087FD13 /* PersonListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonListController.xib; sourceTree = "<group>"; };
 		6F4C3F2C2134731D0087FD13 /* HomeListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListController.swift; sourceTree = "<group>"; };
 		6F4C3F2D2134731D0087FD13 /* HomeListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListController.xib; sourceTree = "<group>"; };
-		6F4C3F38213476D10087FD13 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6F4C3F39213476D10087FD13 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6F4C3F3A213476D10087FD13 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6F4C3F3B213476D10087FD13 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6F4C3F44213483600087FD13 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		6F4C3F4921348F5D0087FD13 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		6F4C3F4A21348F5D0087FD13 /* SubtitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleTableViewCell.xib; sourceTree = "<group>"; };
 		6FB59AA22137311100C499B2 /* HomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailController.swift; sourceTree = "<group>"; };
 		6FB59AA32137311100C499B2 /* HomeDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailController.xib; sourceTree = "<group>"; };
+		6FB59AB62137469300C499B2 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6FB59AB72137469300C499B2 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6FB59AB82137469300C499B2 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6FB59AB92137469300C499B2 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +95,10 @@
 		6F4C3F40213477160087FD13 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6F4C3F38213476D10087FD13 /* Person+CoreDataClass.swift */,
-				6F4C3F39213476D10087FD13 /* Person+CoreDataProperties.swift */,
-				6F4C3F3A213476D10087FD13 /* Home+CoreDataClass.swift */,
-				6F4C3F3B213476D10087FD13 /* Home+CoreDataProperties.swift */,
+				6FB59AB62137469300C499B2 /* Person+CoreDataClass.swift */,
+				6FB59AB72137469300C499B2 /* Person+CoreDataProperties.swift */,
+				6FB59AB82137469300C499B2 /* Home+CoreDataClass.swift */,
+				6FB59AB92137469300C499B2 /* Home+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,17 +222,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FB59ABD2137469300C499B2 /* Home+CoreDataProperties.swift in Sources */,
+				6FB59ABA2137469300C499B2 /* Person+CoreDataClass.swift in Sources */,
 				6FB59AA42137311100C499B2 /* HomeDetailController.swift in Sources */,
+				6FB59ABB2137469300C499B2 /* Person+CoreDataProperties.swift in Sources */,
 				6F4C3F2A213472FD0087FD13 /* PersonListController.swift in Sources */,
+				6FB59ABC2137469300C499B2 /* Home+CoreDataClass.swift in Sources */,
 				6F4C3F2E2134731D0087FD13 /* HomeListController.swift in Sources */,
-				6F4C3F3D213476D10087FD13 /* Person+CoreDataProperties.swift in Sources */,
-				6F4C3F3C213476D10087FD13 /* Person+CoreDataClass.swift in Sources */,
-				6F4C3F3F213476D10087FD13 /* Home+CoreDataProperties.swift in Sources */,
 				6F4C3F1C213471FB0087FD13 /* CoreDataPolygon.xcdatamodeld in Sources */,
 				6F4C3F45213483600087FD13 /* DataProvider.swift in Sources */,
 				6F4C3F4B21348F5D0087FD13 /* SubtitleTableViewCell.swift in Sources */,
 				6F4C3F14213471FB0087FD13 /* AppDelegate.swift in Sources */,
-				6F4C3F3E213476D10087FD13 /* Home+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

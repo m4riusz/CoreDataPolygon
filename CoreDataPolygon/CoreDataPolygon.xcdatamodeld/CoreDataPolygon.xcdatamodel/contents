@@ -4,7 +4,7 @@
         <attribute name="city" attributeType="String" minValueString="2" maxValueString="100" syncable="YES"/>
         <attribute name="postal" attributeType="String" minValueString="6" maxValueString="6" regularExpressionString="[0-9]{2}-[0-9]{3}" syncable="YES"/>
         <attribute name="street" attributeType="String" minValueString="1" maxValueString="200" syncable="YES"/>
-        <relationship name="persons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="home" inverseEntity="Person" syncable="YES"/>
+        <relationship name="persons" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="home" inverseEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>

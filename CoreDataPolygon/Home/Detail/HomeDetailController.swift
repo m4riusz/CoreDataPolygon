@@ -60,16 +60,12 @@ extension HomeDetailController: UITableViewDataSource {
 extension HomeDetailController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let items: NSMutableSet = home?.persons as? NSMutableSet else {
-            
-            return
-        }
         let item: Person = persons[indexPath.row]
-        items.contains(item) ? items.remove(item) : items.add(item)
-        tableView.reloadRows(at: [indexPath], with: .fade)
-        do {
-            try DataProvider.shared.saveContext()
-        } catch let error {
+        item.home = item.home != nil && item.home == home ? nil : home
+        
+        DataProvider.shared.personsUpdatePerson(item, withSuccessCallback: { (person) in
+            tableView.reloadRows(at: [indexPath], with: .fade)
+        }) { (error) in
             NSLog(error.localizedDescription)
         }
     }
