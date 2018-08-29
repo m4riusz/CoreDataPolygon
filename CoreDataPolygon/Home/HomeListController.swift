@@ -10,6 +10,7 @@ class HomeListController: UIViewController {
         
         tableView.register(UINib(nibName: "SubtitleTableViewCell", bundle: nil), forCellReuseIdentifier: "SubtitleTableViewCell")
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +66,7 @@ extension HomeListController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SubtitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SubtitleTableViewCell", for: indexPath) as! SubtitleTableViewCell
+        cell.accessoryType = .disclosureIndicator
         let home: Home = homes[indexPath.row]
         let street: String = home.street ?? ""
         let city: String = home.city ?? ""
@@ -74,4 +76,14 @@ extension HomeListController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension HomeListController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextScreen: HomeDetailController = HomeDetailController()
+        let selectedHome: Home = homes[indexPath.row]
+        nextScreen.home = selectedHome
+        present(UINavigationController(rootViewController: nextScreen), animated: true, completion: nil)
+    }
 }

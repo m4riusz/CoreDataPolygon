@@ -34,6 +34,7 @@ class DataProvider: NSObject {
     
 }
 
+
 extension DataProvider {
     
     func homesAddNew(withStreet street: String?, withCity city: String?, withPostal postal: String?, withSuccessCallback onSuccess: CoreDataSuccessCallback<Home>?, withErrorCallback onError: CoreDataErrorCallback?) -> Void {
@@ -66,5 +67,46 @@ extension DataProvider {
             onError?(error)
         }
     }
+
+}
+
+extension DataProvider {
+    
+    func personsAddNew(withFirstName firstName: String, withLastName lastName: String, withCreateDate createDate: Date, withSuccessCallback onSuccess: CoreDataSuccessCallback<Person>?, withErrorCallback onError: CoreDataErrorCallback?) -> Void {
+        
+        let person: Person = Person(context: persistentContainer.viewContext)
+        person.firstName = firstName
+        person.lastName = lastName
+        person.createDate = createDate as NSDate
+        do {
+            try saveContext()
+            onSuccess?(person)
+        } catch let error {
+            onError?(error)
+        }
+        
+    }
+    
+    func personsGetWithPredicate(_ predicate: NSPredicate? = nil,
+                               withSortDescriptions sortDescriptions: [NSSortDescriptor]? = nil,
+                               withSuccessCallback onSuccess: CoreDataSuccessCallback<[Person]>?,
+                               withErrorCallback onError: CoreDataErrorCallback?) -> Void {
+        do {
+            let fetchRequest: NSFetchRequest = Person.fetchRequest()
+            fetchRequest.predicate = predicate
+            fetchRequest.sortDescriptors = sortDescriptions
+            let persons: [Person] = try persistentContainer.viewContext.fetch(fetchRequest) as [Person]
+            onSuccess?(persons)
+        } catch let error {
+            onError?(error)
+        }
+    }
+    
+    func personsUpdatePerson(_ person: Person,
+                             withSuccessCallback onSuccess: CoreDataSuccessCallback<[Person]>?,
+                             withErrorCallback onError: CoreDataErrorCallback?) -> Void {
+        
+    }
     
 }
+

@@ -1,13 +1,15 @@
 import UIKit
 
-class PersonListController: UIViewController {
+class HomeDetailController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    private var persons: [Person] = []
     
-    var persons: [Person] = []
+    var home: Home?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onAddButton))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(onClose))
         
         tableView.register(UINib(nibName: "SubtitleTableViewCell", bundle: nil), forCellReuseIdentifier: "SubtitleTableViewCell")
         tableView.dataSource = self
@@ -25,34 +27,13 @@ class PersonListController: UIViewController {
     }
     
     @objc
-    func onAddButton() -> Void {
-        let alert: UIAlertController = UIAlertController(title: "Add new home", message: nil, preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.placeholder = "First name"
-        }
-        alert.addTextField { (textField) in
-            textField.placeholder = "Last name"
-        }
-        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action) in
-            let firstName: String = alert.textFields![0].text ?? ""
-            let lastName: String = alert.textFields![1].text ?? ""
-            let createDate: Date = Date()
-            DataProvider.shared.personsAddNew(withFirstName: firstName, withLastName: lastName, withCreateDate: createDate, withSuccessCallback: { (person) in
-                self.persons.insert(person, at: 0)
-                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
-            }, withErrorCallback: { (error) in
-                   NSLog(error.localizedDescription)
-            })
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-            
-        }))
-        self.present(alert, animated: true, completion: nil)
+    func onClose() -> Void {
+        dismiss(animated: true, completion: nil)
     }
 }
 
 
-extension PersonListController: UITableViewDataSource {
+extension HomeDetailController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -70,14 +51,27 @@ extension PersonListController: UITableViewDataSource {
         let createDate: Date = (person.createDate ?? NSDate()) as Date
         cell.textLabel?.text = "\(firstName) \(lastName)"
         cell.detailTextLabel?.text = createDate.description
+        cell.accessoryType = (home?.persons?.contains(person))! ? .checkmark : .none
         return cell
     }
     
 }
 
-extension PersonListController: UITableViewDelegate {
+extension HomeDetailController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let items: NSMutableSet = home?.persons as? NSMutableSet else {
+            
+            return
+        }
+        let item: Person = persons[indexPath.row]
+        items.contains(item) ? items.remove(item) : items.add(item)
+        tableView.reloadRows(at: [indexPath], with: .fade)
+        do {
+            try DataProvider.shared.saveContext()
+        } catch let error {
+            NSLog(error.localizedDescription)
+        }
     }
 }
+
