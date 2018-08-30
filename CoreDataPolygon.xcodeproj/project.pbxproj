@@ -18,12 +18,15 @@
 		6F4C3F45213483600087FD13 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F44213483600087FD13 /* DataProvider.swift */; };
 		6F4C3F4B21348F5D0087FD13 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C3F4921348F5D0087FD13 /* SubtitleTableViewCell.swift */; };
 		6F4C3F4C21348F5D0087FD13 /* SubtitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4C3F4A21348F5D0087FD13 /* SubtitleTableViewCell.xib */; };
+		6F58E2552138919C0079257C /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E2512138919C0079257C /* Home+CoreDataClass.swift */; };
+		6F58E2562138919C0079257C /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E2522138919C0079257C /* Home+CoreDataProperties.swift */; };
+		6F58E2572138919C0079257C /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E2532138919C0079257C /* Country+CoreDataClass.swift */; };
+		6F58E2582138919C0079257C /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E2542138919C0079257C /* Country+CoreDataProperties.swift */; };
+		6F58E25C213894C40079257C /* Model-V1-To-V2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E25B213894C40079257C /* Model-V1-To-V2.xcmappingmodel */; };
 		6FB59AA42137311100C499B2 /* HomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AA22137311100C499B2 /* HomeDetailController.swift */; };
 		6FB59AA52137311100C499B2 /* HomeDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FB59AA32137311100C499B2 /* HomeDetailController.xib */; };
 		6FB59ABA2137469300C499B2 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB62137469300C499B2 /* Person+CoreDataClass.swift */; };
 		6FB59ABB2137469300C499B2 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB72137469300C499B2 /* Person+CoreDataProperties.swift */; };
-		6FB59ABC2137469300C499B2 /* Home+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB82137469300C499B2 /* Home+CoreDataClass.swift */; };
-		6FB59ABD2137469300C499B2 /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB59AB92137469300C499B2 /* Home+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +43,16 @@
 		6F4C3F44213483600087FD13 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		6F4C3F4921348F5D0087FD13 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		6F4C3F4A21348F5D0087FD13 /* SubtitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleTableViewCell.xib; sourceTree = "<group>"; };
+		6F58E25021388F520079257C /* CoreDataPolygon 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataPolygon 2.xcdatamodel"; sourceTree = "<group>"; };
+		6F58E2512138919C0079257C /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Home+CoreDataClass.swift"; path = "../../Home+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6F58E2522138919C0079257C /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Home+CoreDataProperties.swift"; path = "../../Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6F58E2532138919C0079257C /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6F58E2542138919C0079257C /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6F58E25B213894C40079257C /* Model-V1-To-V2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "Model-V1-To-V2.xcmappingmodel"; sourceTree = "<group>"; };
 		6FB59AA22137311100C499B2 /* HomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailController.swift; sourceTree = "<group>"; };
 		6FB59AA32137311100C499B2 /* HomeDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailController.xib; sourceTree = "<group>"; };
 		6FB59AB62137469300C499B2 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6FB59AB72137469300C499B2 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6FB59AB82137469300C499B2 /* Home+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6FB59AB92137469300C499B2 /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,7 @@
 				6F4C3F1F213471FC0087FD13 /* LaunchScreen.storyboard */,
 				6F4C3F22213471FC0087FD13 /* Info.plist */,
 				6F4C3F1A213471FB0087FD13 /* CoreDataPolygon.xcdatamodeld */,
+				6F58E25B213894C40079257C /* Model-V1-To-V2.xcmappingmodel */,
 			);
 			path = CoreDataPolygon;
 			sourceTree = "<group>";
@@ -95,10 +103,12 @@
 		6F4C3F40213477160087FD13 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6F58E2512138919C0079257C /* Home+CoreDataClass.swift */,
+				6F58E2522138919C0079257C /* Home+CoreDataProperties.swift */,
+				6F58E2532138919C0079257C /* Country+CoreDataClass.swift */,
+				6F58E2542138919C0079257C /* Country+CoreDataProperties.swift */,
 				6FB59AB62137469300C499B2 /* Person+CoreDataClass.swift */,
 				6FB59AB72137469300C499B2 /* Person+CoreDataProperties.swift */,
-				6FB59AB82137469300C499B2 /* Home+CoreDataClass.swift */,
-				6FB59AB92137469300C499B2 /* Home+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,17 +232,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FB59ABD2137469300C499B2 /* Home+CoreDataProperties.swift in Sources */,
 				6FB59ABA2137469300C499B2 /* Person+CoreDataClass.swift in Sources */,
 				6FB59AA42137311100C499B2 /* HomeDetailController.swift in Sources */,
+				6F58E2562138919C0079257C /* Home+CoreDataProperties.swift in Sources */,
+				6F58E2572138919C0079257C /* Country+CoreDataClass.swift in Sources */,
+				6F58E2582138919C0079257C /* Country+CoreDataProperties.swift in Sources */,
 				6FB59ABB2137469300C499B2 /* Person+CoreDataProperties.swift in Sources */,
+				6F58E2552138919C0079257C /* Home+CoreDataClass.swift in Sources */,
 				6F4C3F2A213472FD0087FD13 /* PersonListController.swift in Sources */,
-				6FB59ABC2137469300C499B2 /* Home+CoreDataClass.swift in Sources */,
 				6F4C3F2E2134731D0087FD13 /* HomeListController.swift in Sources */,
 				6F4C3F1C213471FB0087FD13 /* CoreDataPolygon.xcdatamodeld in Sources */,
 				6F4C3F45213483600087FD13 /* DataProvider.swift in Sources */,
 				6F4C3F4B21348F5D0087FD13 /* SubtitleTableViewCell.swift in Sources */,
 				6F4C3F14213471FB0087FD13 /* AppDelegate.swift in Sources */,
+				6F58E25C213894C40079257C /* Model-V1-To-V2.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,9 +440,10 @@
 		6F4C3F1A213471FB0087FD13 /* CoreDataPolygon.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				6F58E25021388F520079257C /* CoreDataPolygon 2.xcdatamodel */,
 				6F4C3F1B213471FB0087FD13 /* CoreDataPolygon.xcdatamodel */,
 			);
-			currentVersion = 6F4C3F1B213471FB0087FD13 /* CoreDataPolygon.xcdatamodel */;
+			currentVersion = 6F58E25021388F520079257C /* CoreDataPolygon 2.xcdatamodel */;
 			path = CoreDataPolygon.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="code" attributeType="String" minValueString="2" maxValueString="10" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="1" maxValueString="100" syncable="YES"/>
+        <relationship name="home" toMany="YES" deletionRule="Nullify" destinationEntity="Home" inverseName="country" inverseEntity="Home" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Home" representedClassName="Home" syncable="YES">
+        <attribute name="city" attributeType="String" minValueString="2" maxValueString="100" syncable="YES"/>
+        <attribute name="postal" attributeType="String" minValueString="6" maxValueString="6" regularExpressionString="[0-9]{2}-[0-9]{3}" syncable="YES"/>
+        <attribute name="street" attributeType="String" minValueString="1" maxValueString="200" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="home" inverseEntity="Country" syncable="YES"/>
+        <relationship name="persons" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="home" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="home" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Home" inverseName="persons" inverseEntity="Home" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Home" positionX="-18" positionY="54" width="128" height="28"/>
+        <element name="Person" positionX="-270" positionY="234" width="128" height="105"/>
+        <element name="Country" positionX="-297" positionY="-63" width="128" height="28"/>
+    </elements>
+</model>
